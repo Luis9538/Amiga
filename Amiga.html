@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estoy aquí contigo 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comfortaa', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e1, #e6e6fa);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #4b2e2e;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      animation: aparecer 1s ease-in;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 2em;
+      animation: aparecer 1.5s ease-in;
+    }
+
+    button {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff8da1;
+      transform: scale(1.05);
+    }
+
+    .respuesta {
+      margin-top: 2em;
+      font-size: 1.2em;
+      color: #6a4e4e;
+      animation: aparecer 1s ease-in;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Estoy aquí contigo 💖</h1>
+  <p>
+    Hoy no tienes que ser fuerte.  
+    No tienes que sonreír si no puedes.  
+    Solo quiero que sepas que estoy aquí, contigo.  
+    Sin prisa. Sin juicio. Con cariño.
+  </p>
+
+  <button onclick="mostrarRespuesta('acompanar')">¿Me acompañas un ratito?</button>
+  <button onclick="mostrarRespuesta('palabras')">Solo quiero que me abracen con palabras</button>
+
+  <div id="respuesta" class="respuesta"></div>
+
+  <script>
+    function mostrarRespuesta(opcion) {
+      const respuesta = document.getElementById("respuesta");
+      if (opcion === 'acompanar') {
+        respuesta.innerHTML = `
+          🌿 Gracias por dejarme estar contigo.<br>
+          Vamos a respirar juntos un momento.<br><br>
+          <em>"No estás sola. Estoy aquí, aunque sea en silencio."</em>
+        `;
+      } else if (opcion === 'palabras') {
+        respuesta.innerHTML = `
+          💗 Aquí va mi abrazo en forma de palabras:<br><br>
+          <em>"Eres valiosa, incluso cuando no lo sientes.<br>
+          Tu tristeza no te define. Tu luz sigue viva.<br>
+          Estoy contigo, aunque el mundo parezca lejos."</em>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
